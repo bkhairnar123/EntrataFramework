@@ -25,7 +25,8 @@ public class ResidentPortalPageVerification extends TestBase {
     pageobjects.AcceptCookies.click(); //Accept the cookies
     
     Actions action = new Actions(driver);
-    action.moveToElement(pageobjects.Products).click().perform(); //To hover on products link we use action class
+    
+    action.moveToElement(pageobjects.Products).perform(); //To hover on products link we use action class
     
 	pageobjects.residentPortalheaderlink.click();
 	String ExpectedPageTitle=driver.getTitle();
@@ -35,6 +36,7 @@ public class ResidentPortalPageVerification extends TestBase {
 	
 	//Stale element exception handled by try catch block
 	try {
+	com.waitUntilElementisVisible(driver, pageobjects.residentPortalScheduleDemoButton);
 	pageobjects.residentPortalScheduleDemoButton.click();
 	}
 	catch(Exception e) 
