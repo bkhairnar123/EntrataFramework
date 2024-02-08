@@ -13,8 +13,13 @@ public class CommonFunctions {
 	public WebDriver waitUntilElementisVisible(WebDriver driver,WebElement e) {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(e));
+		wait.until(ExpectedConditions.elementToBeClickable(e));
 		return driver;
 	}
 	
-   
+	public WebDriver waitUntilElementisClickable(WebDriver driver,WebElement e) {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(e));
+		return driver;
+	}
 }

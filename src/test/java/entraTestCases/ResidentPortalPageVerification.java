@@ -36,12 +36,13 @@ public class ResidentPortalPageVerification extends TestBase {
 	
 	//Stale element exception handled by try catch block
 	try {
-	com.waitUntilElementisVisible(driver, pageobjects.residentPortalScheduleDemoButton);
+	com.waitUntilElementisClickable(driver, pageobjects.residentPortalScheduleDemoButton);
 	pageobjects.residentPortalScheduleDemoButton.click();
 	}
 	catch(Exception e) 
 	{
 		driver.navigate().refresh();
+		com.waitUntilElementisClickable(driver, pageobjects.residentPortalScheduleDemoButton);
 		pageobjects.residentPortalScheduleDemoButton.click();
 	}
 	//fill the resident portal Schedule Demo form

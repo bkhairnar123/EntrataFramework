@@ -37,7 +37,7 @@ public class ObjectRepository {
 	@FindBy(id="statusMessage")
 	public WebElement ErrorMsg;
 	
-	@FindBy(xpath="//div[@class='nav-group']/a[text()='ResidentPortal']")
+	@FindBy(xpath="(//div[@class='nav-group']/a)[3]")
 	public WebElement residentPortalheaderlink;
 	
 	@FindBy(xpath="(//div[@class='main-nav-link'])[1]")
