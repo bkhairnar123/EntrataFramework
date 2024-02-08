@@ -25,9 +25,6 @@ public class TestBase {
 	   
 	   
 	   
-	  
-	   
-	   
 	   public void tearDown() 
 	   {
 		   driver.quit();
